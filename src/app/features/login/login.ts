@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Login {
   private fb = inject(FormBuilder);
-
+  private router = inject(Router); // 👈 AQUÍ VA
   // Usamos SIGNAL para el interruptor (Nivel Avanzado)
   esRegistro = signal<boolean>(false);
 
@@ -32,13 +32,18 @@ export class Login {
 
   // Función de ingreso
   login() {
-    if (this.form.valid) {
-      const datos = this.form.value;
-      alert(`Iniciando sesión como: ${datos.full_name}`);
-    } else {
-      alert('Por favor, llena los campos obligatorios.');
-    }
+  if (this.form.valid) {
+    const datos = this.form.value;
+
+    alert(`Iniciando sesión como: ${datos.full_name}`);
+
+    // 🔥 REDIRECCIÓN
+    this.router.navigate(['/homeworks']);
+
+  } else {
+    alert('Por favor, llena los campos obligatorios.');
   }
+}
 
   // Función de registro
   registrar() {
@@ -47,3 +52,4 @@ export class Login {
     this.esRegistro.set(false); // Vuelve al login
   }
 }
+

@@ -1,0 +1,50 @@
+.home-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-image img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.about {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.feature-card {
+  width: 250px;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 80px;
+}
+
+.cta {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

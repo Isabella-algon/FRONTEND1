@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { Menu } from '../menu/menu';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [Menu], // 👈 IMPORTANTE
   templateUrl: './home.html',
-  styleUrl: './home.scss',
+  styleUrl: './home.scss'
 })
 export class Home {}
+
+
