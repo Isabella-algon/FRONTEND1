@@ -1,50 +1,141 @@
+/* 🔥 CAMBIO: mejor tipografía + fondo suave */
 .home-container {
   padding: 40px;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif; /* más moderno que Arial */
+  background: #f5f7fa; /* fondo suave tipo app */
 }
 
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* 🔥 CAMBIO: más espacio y mejor presentación */
+  padding: 60px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  border-radius: 15px;
 }
 
+/* 🔥 CAMBIO: más control del texto */
 .hero-text {
   max-width: 50%;
 }
 
+/* 🔥 NUEVO: jerarquía visual fuerte */
+.hero-text h1 {
+  font-size: 48px;
+  color: #1e2a38;
+  margin-bottom: 20px;
+}
+
+/* 🔥 NUEVO */
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 🔥 MEJORA: imagen más elegante */
 .hero-image img {
-  width: 400px;
-  border-radius: 10px;
+  width: 300px;
+  border-radius: 15px; /* más moderno */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* efecto pro */
 }
 
+/* ABOUT */
 .about {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.features {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-
-.feature-card {
-  width: 250px;
-  text-align: center;
-}
-
-.feature-card img {
-  width: 80px;
-}
-
-.cta {
   margin-top: 60px;
   text-align: center;
 }
 
+/* 🔥 NUEVO */
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* 🔥 NUEVO */
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  gap: 20px; /* 🔥 CAMBIO: separación uniforme */
+}
+
+/* 🔥 CAMBIO GRANDE: tarjetas tipo app */
+.feature-card {
+  width: 250px;
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* 🔥 NUEVO: animación hover */
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* 🔥 MEJORA */
+.feature-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* CTA */
+.cta {
+  margin-top: 70px;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  border-radius: 15px;
+}
+
+/* 🔥 NUEVO */
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* 🔥 BOTONES PRO */
 .btn-primary, .btn-secondary {
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* 🔥 DIFERENCIACIÓN DE BOTONES */
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+}
+
+/* 🔥 HOVER PRO */
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background: white;
+  color: #007bff;
+}
+
+/* 🔥 HOVER */
+.btn-secondary:hover {
+  background: #f1f1f1;
 }

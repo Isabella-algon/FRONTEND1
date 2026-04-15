@@ -1,20 +1,21 @@
+<!-- BOTÓN HAMBURGUESA -->
 <div class="menu-icon" (click)="toggleMenu()">
   ☰
 </div>
 
+<!-- SIDEBAR -->
 <div class="sidebar" [class.active]="menuAbierto()">
 
+  <!-- LOGO -->
   <h2 class="logo">Vademécum</h2>
 
-  <div class="menu-icon" (click)="toggleMenu()"> ☰ </div>
-<div class="sidebar" [class.active]="menuAbierto()">
-  <h2 class="logo">Vademécum</h2>
-  
-  <!-- Aquí reemplazas el <ul> -->
+  <!-- MENÚ -->
   <ul class="menu-list"> 
     <li (click)="irA('/home')">🏠 Home</li>
     <li (click)="irA('/products')">📦 Products</li>
-    <li (click)="irA('/usuarios')">👤 Usuarios</li>
-  </ul>
-</div>
 
+    <!-- 🔥 OJO: revisa esta ruta -->
+    <li (click)="irA('/users')">👤 Usuarios</li>
+  </ul>
+
+</div>
