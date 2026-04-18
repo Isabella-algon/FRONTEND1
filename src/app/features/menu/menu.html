@@ -14,8 +14,10 @@
     <li (click)="irA('/home')">🏠 Home</li>
     <li (click)="irA('/products')">📦 Products</li>
 
-    <!-- 🔥 OJO: revisa esta ruta -->
-    <li (click)="irA('/users')">👤 Usuarios</li>
+    <!-- 🔥 SOLO ADMIN VE ESTA OPCIÓN -->
+    <!-- *ngIf="role === 1" = solo muestra esto si el usuario es admin -->
+    <li *ngIf="role === 1" (click)="irA('/users')">👤 Usuarios</li>
+
   </ul>
 
 </div>

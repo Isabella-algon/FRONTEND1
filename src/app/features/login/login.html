@@ -10,15 +10,18 @@
 
     <form [formGroup]="form" >
       
+      <!-- LOGIN: SOLO EMAIL -->
       <div class="form-group">
-        <label>Usuario</label>
-        <input type="text" formControlName="full_name" placeholder="Ej: ejemplo@correo.com" />
+        <label>Correo Electrónico</label>
+        <input type="email" formControlName="email" placeholder="ejemplo@uces.edu.co" />
       </div>
 
+      <!-- REGISTRO -->
       <div *ngIf="esRegistro()">
+
         <div class="form-group">
-          <label>Correo Electrónico</label>
-          <input type="email" formControlName="email" placeholder="ejemplo@correo.com" />
+          <label>Nombre Completo</label>
+          <input type="text" formControlName="full_name" placeholder="Tu nombre completo" />
         </div>
 
         <div class="form-group">
@@ -30,6 +33,7 @@
           <label>Documento de Identidad</label>
           <input type="text" formControlName="identification" placeholder="C.C. o Tarjeta Prof." />
         </div>
+
       </div>
 
       <div class="form-group">
