@@ -23,6 +23,14 @@ export const routes: Routes = [
   },
 
   {
+    path: 'dashboard',
+    canActivate: [authGuard],
+    loadComponent: () => import('./features/dashboard/dashboard').then(m => m.Dashboard)
+  },
+
+
+
+  {
     path: 'users',
     canActivate: [authGuard],
     loadComponent: () => import('./features/users/users').then(m => m.Users)

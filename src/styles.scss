@@ -136,3 +136,18 @@ app-menu {
     transform: translateY(0);
   }
 }
+
+/* 🔥 CONTENEDOR DE CARDS */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;   /* UNA SOLA FILA */
+  overflow-x: auto;    /* scroll si no caben */
+}
+
+/* 🔥 CADA CARD */
+.card {
+  min-width: 250px;
+  flex: 0 0 auto;
+}

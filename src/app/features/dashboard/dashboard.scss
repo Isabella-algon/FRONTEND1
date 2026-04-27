@@ -1,0 +1,135 @@
+:host {
+  display: block;
+}
+ 
+.dashboard-page {
+  padding: 24px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  color: #e5eef9;
+}
+ 
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+ 
+.dashboard-header h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  font-weight: 800;
+}
+ 
+.dashboard-header p {
+  margin: 0;
+  color: #9fb0c7;
+}
+ 
+.reload-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+ 
+.reload-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+ 
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+ 
+.kpi-card,
+.chart-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px);
+}
+ 
+.kpi-label {
+  display: block;
+  font-size: 13px;
+  color: #9fb0c7;
+  margin-bottom: 8px;
+}
+ 
+.kpi-value {
+  font-size: 28px;
+  font-weight: 800;
+}
+ 
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+ 
+.large-card,
+.full-width-card {
+  width: 100%;
+}
+ 
+.card-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+ 
+.card-subtitle {
+  margin: 0 0 16px;
+  color: #9fb0c7;
+  font-size: 14px;
+}
+ 
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+ 
+.bar-container {
+  height: 360px;
+}
+ 
+@media (max-width: 1100px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+ 
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+@media (max-width: 640px) {
+  .dashboard-page {
+    padding: 16px;
+  }
+ 
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .chart-container,
+  .bar-container {
+    height: 260px;
+  }
+}
