@@ -1,0 +1,142 @@
+// Contenedor principal
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Buscador
+.search-container {
+  margin-bottom: 20px;
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+}
+
+// Estilo de botones de Filtros
+.filters-main, .filters-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #007bff;
+    background: white;
+    color: #007bff;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &.active {
+      background: #007bff;
+      color: white;
+    }
+
+    &:hover {
+      background: #e7f1ff;
+    }
+  }
+}
+
+// Filtros de subcategoría (un poco más pequeños y grises)
+.filters-sub button {
+  border-color: #6c757d;
+  color: #6c757d;
+  font-size: 0.9em;
+
+  &.active {
+    background: #6c757d;
+    color: white;
+  }
+}
+
+// Grid de tarjetas
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+  .product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f9f9f9;
+  }
+
+  .card-body {
+    padding: 15px;
+    text-align: center;
+    
+    .product-name { margin: 10px 0; color: #333; }
+    .product-info { font-size: 0.9em; color: #666; margin: 5px 0; }
+  }
+
+  .btn-more {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+// MODAL (Ventana emergente)
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  .btn-close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    border: none; background: none;
+    cursor: pointer;
+  }
+
+  .info-row { margin-bottom: 15px; }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}

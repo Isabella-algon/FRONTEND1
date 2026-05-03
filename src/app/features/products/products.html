@@ -1,1 +1,89 @@
-<p>products works!</p>
+<div class="container">
+  <!-- 1. Buscador -->
+  <div class="search-container">
+    <input 
+      type="text" 
+      [(ngModel)]="searchText" 
+      placeholder="Buscar por nombre o genérico..."
+      class="search-input">
+  </div>
+
+  <!-- 2. Filtros de Categorías Principales -->
+  <div class="filters-main">
+    <button 
+      *ngFor="let cat of categories" 
+      (click)="selectCategory(cat)"
+      [class.active]="selectedCategory === cat"
+      class="btn-filter">
+      {{ cat }}
+    </button>
+  </div>
+
+  <!-- 3. Filtros de Subcategorías (Familias) -->
+  <!-- Solo aparece si la categoría tiene familias definidas -->
+  <div class="filters-sub" *ngIf="getSubcategories().length > 1">
+    <button 
+      *ngFor="let sub of getSubcategories()" 
+      (click)="selectSubcategory(sub)"
+      [class.active]="selectedSubcategory === sub"
+      class="btn-subfilter">
+      {{ sub }}
+    </button>
+  </div>
+
+  <!-- 4. Cuadrícula de Productos -->
+  <div class="products-grid">
+    <div class="card" *ngFor="let p of filterProducts()">
+      <div class="card-header">
+        <button class="btn-fav" (click)="toggleFavorite(p)">
+          {{ p.favorite ? '⭐' : '☆' }}
+        </button>
+      </div>
+      
+      <img [src]="p.image" [alt]="p.name" class="product-img">
+      
+      <div class="card-body">
+        <h3 class="product-name">{{ p.name }}</h3>
+        <p class="product-info"><strong>Genérico:</strong> {{ p.generic_name }}</p>
+        <p class="product-info"><strong>Familia:</strong> {{ p.family }}</p>
+        
+        <button class="btn-more" (click)="verDetalle(p)">Ver más</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Modal de Detalle (Ver más) -->
+  <div class="modal-overlay" *ngIf="selectedProduct" (click)="cerrarDetalle()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="btn-close" (click)="cerrarDetalle()">&times;</button>
+      
+      <div class="modal-header">
+        <h2>{{ selectedProduct.name }}</h2>
+        <p class="subtitle">{{ selectedProduct.generic_name }}</p>
+      </div>
+      
+      <div class="modal-body">
+        <div class="info-row">
+          <strong>Mecanismo de acción:</strong>
+          <p>{{ selectedProduct.mecanismo }}</p>
+        </div>
+        
+        <div class="info-grid">
+          <div><strong>Laboratorio:</strong> {{ selectedProduct.laboratorio }}</div>
+          <div><strong>Concentración:</strong> {{ selectedProduct.concentracion }}</div>
+          <div><strong>Forma Farmacéutica:</strong> {{ selectedProduct.forma }}</div>
+        </div>
+        
+        <div class="info-row">
+          <strong>Posología:</strong>
+          <p>{{ selectedProduct.posologia }}</p>
+        </div>
+        
+        <div class="info-row" *ngIf="selectedProduct.notas">
+          <strong>Notas:</strong>
+          <p>{{ selectedProduct.notas }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
