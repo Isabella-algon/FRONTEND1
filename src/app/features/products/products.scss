@@ -44,7 +44,7 @@
   }
 }
 
-// Filtros de subcategoría (un poco más pequeños y grises)
+// Filtros de subcategoría
 .filters-sub button {
   border-color: #6c757d;
   color: #6c757d;
@@ -64,6 +64,7 @@
 }
 
 .card {
+  position: relative; // Necesario para posicionar la estrella
   border: 1px solid #eee;
   border-radius: 12px;
   overflow: hidden;
@@ -71,31 +72,79 @@
   background: white;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  // --- BOTÓN DE ESTRELLA (FAVORITOS) ---
+  .btn-fav {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    
+    // Limpieza total del cuadro
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // Tamaño y color base
+    font-size: 1.6rem; // Más grande como pediste
+    color: #ccc; // Gris cuando no es favorita
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+
+    // Estado Activo (Favorito)
+    &.active {
+      color: #ffc107; // Amarillo brillante
+      transform: scale(1.15); // Un toque más de tamaño al activarse
+      filter: drop-shadow(0 0 3px rgba(255, 193, 7, 0.3));
+    }
+
+    &:active {
+      transform: scale(0.9); // Efecto de pulsación al hacer clic
+    }
+  }
 
   .product-img {
     width: 100%;
     height: 200px;
     object-fit: contain;
     background: #f9f9f9;
+    padding: 10px;
   }
 
   .card-body {
     padding: 15px;
     text-align: center;
     
-    .product-name { margin: 10px 0; color: #333; }
+    .product-name { margin: 10px 0; color: #333; font-weight: bold; }
     .product-info { font-size: 0.9em; color: #666; margin: 5px 0; }
   }
 
   .btn-more {
-    margin-top: 10px;
-    width: 100%;
+    margin: 10px 15px 15px;
     padding: 10px;
     background: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #218838;
+    }
   }
 }
 
@@ -127,6 +176,8 @@
     font-size: 24px;
     border: none; background: none;
     cursor: pointer;
+    color: #999;
+    &:hover { color: #333; }
   }
 
   .info-row { margin-bottom: 15px; }

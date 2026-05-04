@@ -1,68 +1,97 @@
 <div class="page">
+ 
+  <!-- ── HEADER ────────────────────────────────────────────── -->
   <div class="head">
     <div class="title">
       <h1>Dashboard Vademécum</h1>
-      <p>Ejemplo con datos mock para luego conectar al servicio real.</p>
+      <p>Análisis de medicamentos oftalmológicos — datos reales</p>
+    </div>
+    <div class="head-badge">
+      <span class="dot"></span> Vademécum actualizado
     </div>
   </div>
-
+ 
+  <!-- ── KPIs ──────────────────────────────────────────────── -->
   <div class="kpi-grid">
-    <div class="kpi-card">
-      <h3>Usuarios</h3>
-      <p>{{ summary().totalUsers }}</p>
+ 
+    <div class="kpi-card kpi-green">
+      <span class="kpi-icon">💊</span>
+      <div>
+        <span class="kpi-label">Total de productos</span>
+        <p class="kpi-value">{{ totalProductos }}</p>
+      </div>
     </div>
-
-    <div class="kpi-card">
-      <h3>Productos</h3>
-      <p>{{ summary().totalProducts }}</p>
+ 
+    <div class="kpi-card kpi-blue">
+      <span class="kpi-icon">🏆</span>
+      <div>
+        <span class="kpi-label">Categoría con más productos</span>
+        <p class="kpi-value">{{ topCategoria }}</p>
+      </div>
     </div>
-
-    <div class="kpi-card">
-      <h3>Ventas</h3>
-      <p>{{ summary().totalSales }}</p>
+ 
+    <div class="kpi-card kpi-teal">
+      <span class="kpi-icon">💧</span>
+      <div>
+        <span class="kpi-label">Forma farmacéutica más frecuente</span>
+        <p class="kpi-value">{{ topForma }}</p>
+      </div>
     </div>
-
-    <div class="kpi-card">
-      <h3>Usuarios Activos</h3>
-      <p>{{ summary().activeUsersPercent }}%</p>
-    </div> 
+ 
+    <div class="kpi-card kpi-purple">
+      <span class="kpi-icon">🔬</span>
+      <div>
+        <span class="kpi-label">Laboratorios registrados</span>
+        <p class="kpi-value">{{ totalLaboratorios }}</p>
+      </div>
+    </div>
+ 
   </div>
-
+ 
+  <!-- ── FILA 2: Barras + Doughnut ─────────────────────────── -->
   <div class="grid2">
+ 
     <div class="card chart-card">
-      <h3>Ventas por mes</h3>
-      <div class="chart">
+      <h3 class="card-title">Productos por categoría</h3>
+      <p class="card-subtitle">Número de nombres comerciales por área terapéutica</p>
+      <div class="chart-container">
         <canvas
           baseChart
-          [data]="lineChartData()"
-          [type]="lineChartType"
-          [options]="chartOptions">
+          [data]="barChartData"
+          [type]="barChartType"
+          [options]="barChartOptions">
         </canvas>
       </div>
     </div>
-
+ 
     <div class="card chart-card">
-      <h3>Estado de productos</h3>
-      <div class="chart">
+      <h3 class="card-title">Top laboratorios</h3>
+      <p class="card-subtitle">Distribución de productos por fabricante</p>
+      <div class="chart-container">
         <canvas
           baseChart
-          [data]="doughnutChartData()" 
+          [data]="doughnutChartData"
           [type]="doughnutChartType"
-          [options]="chartOptions">
+          [options]="doughnutChartOptions">
         </canvas>
       </div>
     </div>
+ 
   </div>
-
-  <div class="card chart-card">
-    <h3>Productos por categoría</h3>
-    <div class="chart">
+ 
+  <!-- ── FILA 3: Línea formas ──────────────────────────────── -->
+  <div class="card chart-card full">
+    <h3 class="card-title">Distribución por forma farmacéutica</h3>
+    <p class="card-subtitle">Cantidad de productos según su presentación</p>
+    <div class="chart-container bar-container">
       <canvas
         baseChart
-        [data]="barChartData()" 
-        [type]="barChartType"
-        [options]="chartOptions">
+        [data]="lineChartData"
+        [type]="lineChartType"
+        [options]="lineChartOptions">
       </canvas>
     </div>
   </div>
+ 
 </div>
+ 

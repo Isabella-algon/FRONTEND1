@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { DataService } from '../../service/data.service';
+
+
+
 
 @Component({
   selector: 'app-products',
@@ -9,7 +13,10 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './products.html',
   styleUrls: ['./products.scss']
 })
+
 export class Products {
+  constructor(private dataService: DataService) {}
+
   selectedCategory: string = 'Todos';
   selectedSubcategory: string = 'Todas';
   searchText: string = '';
@@ -220,7 +227,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Aminoglucósido que actúa sobre la subunidad 30s.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/DECADRON.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de la subunidad 30s\\Decadron.webp",
     "favorite": false
   },
   {
@@ -234,7 +241,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la subunidad 30s.",
     "posologia": "Según indicación clínica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/OFTAFLOX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de la subunidad 30s\\Oftaxlox unguento.webp",
     "favorite": false
   },
   {
@@ -248,7 +255,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la subunidad 30s.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/CONJUNTIN-S.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de la subunidad 30s\\Conjuntin.jpg",
     "favorite": false
   },
   {
@@ -262,7 +269,7 @@ export class Products {
     "forma": "Solución/Ungüento",
     "mecanismo": "Combinación de antibióticos que inhiben la subunidad 30s y alteran la membrana, más un corticoide.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/MAXITROL.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de la subunidad 30s\\Maxitrol.webp",
     "favorite": false
   },
   {
@@ -276,7 +283,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Aminoglucósido que actúa sobre la subunidad ribosomal 30s.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/GOTABIOTIC.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Gotabiotic.png",
     "favorite": false
   },
   {
@@ -290,7 +297,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la síntesis proteica (30s) asociado a un antiinflamatorio esteroideo.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/GOTABIOTIC-D.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Gotabiotic-D.jpg",
     "favorite": false
   },
   {
@@ -304,7 +311,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Antibiótico aminoglucósido más un corticoide de menor penetración sistémica.",
     "posologia": "Aplicar en fondo de saco cada 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/GOTABIOTIC-F.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Gotabiotic-F.webp",
     "favorite": false
   },
   {
@@ -318,7 +325,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la subunidad ribosomal 30s.",
     "posologia": "Aplicar 1 gota en cada ojo cada 6 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/OPHTHABRACIN.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Opthabracin.png",
     "favorite": false
   },
   {
@@ -332,7 +339,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Combinación de un antibiótico aminoglucósido (30s) y un corticoide.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/OPHTHABRACIN-D.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Optabracin-D solucion.webp",
     "favorite": false
   },
   {
@@ -346,7 +353,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la subunidad ribosomal 30s.",
     "posologia": "Según indicación clínica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/XOLOF.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Xolof.jpg",
     "favorite": false
   },
   {
@@ -360,7 +367,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Aminoglucósido que actúa sobre la subunidad 30s.",
     "posologia": "1 gota cada 4 a 6 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TOBRAOFTAL.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Tobraoftal.webp",
     "favorite": false
   },
   {
@@ -374,7 +381,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Acción antibiótica (30s) y antiinflamatoria.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TOBRAOFTAL-D.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Tobraoftal-D.webp",
     "favorite": false
   },
   {
@@ -388,7 +395,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Antibiótico aminoglucósido más un corticoide de diseño (soft drug).",
     "posologia": "1 gota cada 4-6 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/LOTEMICIN.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Lotemicin.webp",
     "favorite": false
   },
   {
@@ -402,7 +409,7 @@ export class Products {
     "forma": "Solución / Ungüento",
     "mecanismo": "Aminoglucósido de amplio espectro que actúa sobre la subunidad 30s.",
     "posologia": "1 gota cada 4 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TOBREX.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Tobrex.webp",
     "favorite": false
   },
   {
@@ -416,7 +423,7 @@ export class Products {
     "forma": "Suspensión / Ungüento",
     "mecanismo": "Combinación de un aminoglucósido (30s) y un corticoide para procesos inflamatorios e infecciosos.",
     "posologia": "1 gota cada 4 a 6 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TOBRADEX.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Tobradex.webp",
     "favorite": false
   },
   {
@@ -430,7 +437,7 @@ export class Products {
     "forma": "Solución / Ungüento",
     "mecanismo": "Inhibidor de la síntesis proteica (30s) con acción antiinflamatoria esteroidea.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TRAZIDEX.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Trazidex.webp",
     "favorite": false
   },
   {
@@ -444,7 +451,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Antibiótico de amplio espectro asociado a un potente antiinflamatorio.",
     "posologia": "1 gota cada 6 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TOBRAGAN D.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Tobragan-D.webp",
     "favorite": false
   },
   {
@@ -458,7 +465,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Control de infecciones bacterianas superficiales y la inflamación asociada.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TOBRACORT.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Tobracort.jpg",
     "favorite": false
   },
   {
@@ -472,7 +479,7 @@ export class Products {
     "forma": "Ungüento Oftálmico",
     "mecanismo": "La oxitetraciclina inhibe la subunidad 30s y la polimixina B altera la membrana citoplasmática.",
     "posologia": "Aplicar en el saco conjuntival de 2 a 4 veces al día.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TERRAMICINA.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Terramicina.jpg",
     "favorite": false
   },
   {
@@ -486,7 +493,7 @@ export class Products {
     "forma": "Ungüento Oftálmico",
     "mecanismo": "Doble acción antibiótica: inhibición proteica y alteración de membrana.",
     "posologia": "Según indicación clínica.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/TERRAVITAL.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Terravital.png",
     "favorite": false
   },
   {
@@ -500,7 +507,7 @@ export class Products {
     "forma": "Ungüento Oftálmico",
     "mecanismo": "Antibiótico polipeptídico que altera la permeabilidad de la membrana bacteriana.",
     "posologia": "Aplicar cada 8 a 12 horas.",
-    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/OXYOFTAL.webp",
+    "image": "images/Antibioticos/Inhibidores de la subunidad 30s/Oxyoftal.webp",
     "favorite": false
   },
   {
@@ -514,7 +521,7 @@ export class Products {
     "forma": "Gel Oftálmico",
     "mecanismo": "Inhibe la síntesis proteica bacteriana mediante el bloqueo del factor de elongación G.",
     "posologia": "Aplicar 1 gota cada 12 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de la síntesis proteíca/FUCITHALMIC.webp",
+    "image": "images/Antibioticos/Inhibidores de la síntesis proteíca/Fucithalmic.jpg",
     "favorite": false
   },
   {
@@ -528,7 +535,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la enzima dihidropteroato sintasa, bloqueando la síntesis de ácido dihidrofólico y disminuyendo la síntesis de ácido fólico.",
     "posologia": "Aplicar 1 gota en cada ojo cada 6 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de Metabolitos/BLEF-10 CON LAGRIFILM.webp",
+    "image": "images/Antibioticos/Inhibidores de Metabolitos/Blef.jpg",
     "favorite": false
   },
   {
@@ -542,7 +549,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista del PABA que inhibe la síntesis de ácido fólico bacteriano, asociado a un corticoide.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de Metabolitos/DELTAMID OFTENO.webp",
+    "image": "images/Antibioticos/Inhibidores de Metabolitos/Deltamid ofteno.jpg",
     "favorite": false
   },
   {
@@ -556,7 +563,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "El trimetropin inhibe la enzima dihidrofolato reductasa, bloqueando la reducción de folatos.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de Metabolitos/OQ-PLUS.webp",
+    "image": "images/Antibioticos/Inhibidores de Metabolitos/oq-plus.jpg",
     "favorite": false
   },
   {
@@ -570,7 +577,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la DNA girasa bacteriana, impidiendo la replicación y transcripción del ADN.",
     "posologia": "Aplicar 1 gota en cada ojo cada 6 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/OFLOX.webp",
+    "image": "/images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)/Oflox.jpg",
     "favorite": false
   },
   {
@@ -584,7 +591,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la DNA girasa bacteriana.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/OCUFLOX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Ocuflox.webp",
     "favorite": false
   },
   {
@@ -598,7 +605,7 @@ export class Products {
     "forma": "Solución/Ungüento",
     "mecanismo": "Quinolona de segunda generación que inhibe la síntesis del ADN bacteriano, asociada a un corticoide.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/CIPRODEX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Ciprodex.png",
     "favorite": false
   },
   {
@@ -612,7 +619,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la DNA girasa y topoisomerasa IV bacteriana.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/CIPROVAL.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Ciproval.jpg",
     "favorite": false
   },
   {
@@ -626,7 +633,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Acción bactericida mediante la inhibición de la topoisomerasa II y IV.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/CIFLOBLAS.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Cifloblas.jpg",
     "favorite": false
   },
   {
@@ -640,7 +647,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bactericida que actúa inhibiendo la síntesis del ADN bacteriano por bloqueo de la DNA-girasa.",
     "posologia": "1 gota cada 6 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/WASSERCIPRO.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Wasser Cipro.jpg",
     "favorite": false
   },
   {
@@ -654,7 +661,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la topoisomerasa II (DNA girasa) y la topoisomerasa IV bacteriana.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/POENBIOTIC.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Poentibiotic.webp",
     "favorite": false
   },
   {
@@ -668,7 +675,7 @@ export class Products {
     "forma": "Solución / Ungüento",
     "mecanismo": "Interfiere en la replicación del ADN bacteriano inhibiendo la DNA girasa.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/SOPHIXIN.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Sophixin.png",
     "favorite": false
   },
   {
@@ -682,7 +689,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea la síntesis de ADN bacteriano durante la replicación.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/FLOBACT.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Flobact.webp",
     "favorite": false
   },
   {
@@ -696,7 +703,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Combinación de quinolona bactericida con un antiinflamatorio esteroideo.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/FLOBACT-D.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Flobact-D.webp",
     "favorite": false
   },
   {
@@ -710,7 +717,7 @@ export class Products {
     "forma": "Solución / Ungüento",
     "mecanismo": "Inhibición de la síntesis del ADN bacteriano.",
     "posologia": "1 gota cada 4-6 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/CILOX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Cilox.jpg",
     "favorite": false
   },
   {
@@ -724,7 +731,7 @@ export class Products {
     "forma": "Suspensión / Ungüento",
     "mecanismo": "Antibiótico de amplio espectro más esteroide para reducir la inflamación.",
     "posologia": "Según indicación clínica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/CILODEX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Cilodex.jpg",
     "favorite": false
   },
   {
@@ -738,7 +745,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Quinolona de cuarta generación que inhibe las topoisomerasas II y IV, con alta potencia contra gram positivos.",
     "posologia": "1 gota cada 8 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/MOXOF.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Moxof.jpg",
     "favorite": false
   },
   {
@@ -752,7 +759,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Antibiótico de amplio espectro más corticoide para el control de la inflamación postquirúrgica.",
     "posologia": "1 gota cada 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/OFTAMOX-D.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Oftamox-D.webp",
     "favorite": false
   },
   {
@@ -766,7 +773,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Combinación de moxifloxacina (8-metoxiquinolona) y dexametasona.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/VIGADEXA.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\VIGADEXA.2.webp",
     "favorite": false
   },
   {
@@ -780,7 +787,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bactericida que actúa contra una amplia gama de patógenos oculares.",
     "posologia": "1 gota cada 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/QUIMOX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Quimox.webp",
     "favorite": false
   },
   {
@@ -794,7 +801,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Quinolona de cuarta generación asociada a un corticoide de alta potencia.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/ZYPRED.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Zypred.webp",
     "favorite": false
   },
   {
@@ -808,7 +815,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la replicación del ADN bacteriano.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/GASYN.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Gasyn.webp",
     "favorite": false
   },
   {
@@ -822,7 +829,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Actúa sobre las enzimas topoisomerasa II y IV.",
     "posologia": "Según indicación clínica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/POENGATIF.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\POENGATIF.png",
     "favorite": false
   },
   {
@@ -836,7 +843,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Gatifloxacina de alta concentración para mayor eficacia bactericida.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/ZYMAXID.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Zymaxid.jpeg",
     "favorite": false
   },
   {
@@ -850,148 +857,25 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Asociación de quinolona de cuarta generación y dexametasona.",
     "posologia": "1 gota cada 6 a 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/GATIDEX.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Gatidex.jpg",
     "favorite": false
+
   },
-  {
-    "id": 51,
-    "name": "Moxof",
-    "generic_name": "Moxifloxacina",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "SAVAL S.A",
-    "concentracion": "0.5%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Quinolona de cuarta generación que inhibe las topoisomerasas II y IV, con alta potencia contra gram positivos.",
-    "posologia": "1 gota cada 8 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/MOXOF.webp",
-    "favorite": false
-  },
-  {
-    "id": 52,
-    "name": "Oftamox-D",
-    "generic_name": "Moxifloxacina + Dexametasona",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Tecnoquímicas S.A",
-    "concentracion": "0.5% + 0.1%",
-    "forma": "Suspensión Oftálmica",
-    "mecanismo": "Antibiótico de amplio espectro más corticoide para el control de la inflamación postquirúrgica.",
-    "posologia": "1 gota cada 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/OFTAMOX-D.webp",
-    "favorite": false
-  },
-  {
-    "id": 53,
-    "name": "Vigadexa",
-    "generic_name": "Moxifloxacina + Dexametasona",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Alcon",
-    "concentracion": "0.5% + 0.1%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Combinación de moxifloxacina (8-metoxiquinolona) y dexametasona.",
-    "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/VIGADEXA.webp",
-    "favorite": false
-  },
-  {
-    "id": 54,
-    "name": "Quimox",
-    "generic_name": "Moxifloxacina",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Especialidades oftalmológicas S.A.",
-    "concentracion": "0.5%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Bactericida que actúa contra una amplia gama de patógenos oculares.",
-    "posologia": "1 gota cada 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/QUIMOX.webp",
-    "favorite": false
-  },
-  {
-    "id": 55,
-    "name": "Zypred",
-    "generic_name": "Gatifloxacina + Prednisolona",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "AbbVie S.A.S",
-    "concentracion": "0.3% + 1%",
-    "forma": "Suspensión Oftálmica",
-    "mecanismo": "Quinolona de cuarta generación asociada a un corticoide de alta potencia.",
-    "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/ZYPRED.webp",
-    "favorite": false
-  },
-  {
-    "id": 56,
-    "name": "Gasyn",
-    "generic_name": "Gatifloxacina",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Abbott",
-    "concentracion": "0.3%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Inhibidor de la replicación del ADN bacteriano.",
-    "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/GASYN.webp",
-    "favorite": false
-  },
-  {
-    "id": 57,
-    "name": "Poengatif",
-    "generic_name": "Gatifloxacina",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Megalabs",
-    "concentracion": "0.3%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Actúa sobre las enzimas topoisomerasa II y IV.",
-    "posologia": "Según indicación clínica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/POENGATIF.webp",
-    "favorite": false
-  },
-  {
-    "id": 58,
-    "name": "Zymaxid",
-    "generic_name": "Gatifloxacina",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Allergan",
-    "concentracion": "0.5%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Gatifloxacina de alta concentración para mayor eficacia bactericida.",
-    "posologia": "Según indicación médica.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/ZYMAXID.webp",
-    "favorite": false
-  },
-  {
-    "id": 59,
-    "name": "Gatidex",
-    "generic_name": "Gatifloxacina + Dexametasona",
-    "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Poen",
-    "concentracion": "0.3% + 0.1%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Asociación de quinolona de cuarta generación y dexametasona.",
-    "posologia": "1 gota cada 6 a 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/GATIDEX.webp",
-    "favorite": false
-  },
-  {
+  
+   {
     "id": 60,
-    "name": "Caryof",
-    "generic_name": "Gatifloxacina",
+    "name": "Carteof",
+    "generic_name": "Gatifloxacina + Prednisolona",
     "category": "Antibioticos",
-    "family": "Inhibidores de ácidos nucleicos (quinolonas)",
-    "laboratorio": "Sophia",
-    "concentracion": "0.3%",
-    "forma": "Solución Oftálmica",
-    "mecanismo": "Quinolona de cuarta generación que inhibe las enzimas topoisomerasa II y IV, impidiendo la replicación del ADN bacteriano.",
-    "posologia": "1 gota cada 8 horas.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/CARYOF.webp",
+    "family": "Antibiótico con Esteroide",
+    "laboratorio": "Abbott",
+    "concentracion": "0.3% / 1%",
+    "forma": "Suspensión Oftálmica",
+    "mecanismo": "Antibiótico de amplio espectro (quinolona) que inhibe la replicación del ADN bacteriano, combinado con un esteroide que suprime la respuesta inflamatoria ocular.",
+    "posologia": "Aplicar 1 gota cada 8 horas.",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Carteof.webp",
     "favorite": false
+
   },
   {
     "id": 61,
@@ -1004,7 +888,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Cloroquinolona de cuarta generación con alta afinidad por las topoisomerasas bacterianas, diseñada exclusivamente para uso ocular.",
     "posologia": "1 gota cada 8 horas por 7 días.",
-    "image": "images/Antibioticos/Inhibidores de ácidos nucleicos (quinolonas)/BESIVANCE.webp",
+    "image": "\\images\\Antibioticos\\Inhibidores de ácidos nucleicos (quinolonas, bactericida daña el ADN)\\Besivance.jpg",
     "favorite": false
   },
   {
@@ -1018,7 +902,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la degranulación de los mastocitos, impidiendo la liberación de mediadores inflamatorios como la histamina y leucotrienos.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2-3 meses.",
-    "image": "images/Antialergicos/Estabilizadores de membrana/SYVICROM.webp",
+    "image": "\\images\\Antialergicos\\Estabilizadores de membrana\\Syvicrom.jpeg",
     "favorite": false
   },
   {
@@ -1032,7 +916,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Estabilizador de mastocitos que previene la respuesta alérgica mediada por IgE.",
     "posologia": "Aplicar 1 gota cada 6 a 8 horas.",
-    "image": "images/Antialergicos/Estabilizadores de membrana/CROMOVITAL.webp",
+    "image": "\\images\\Antialergicos\\Estabilizadores de membrana\\Cromovital.jpeg",
     "favorite": false
   },
   {
@@ -1046,7 +930,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Impide la liberación de histamina al estabilizar la membrana del mastocito.",
     "posologia": "Aplicar 1 gota cada 6 a 12 horas.",
-    "image": "images/Antialergicos/Estabilizadores de membrana/OFTACROMAX.webp",
+    "image": "\\images\\Antialergicos\\Estabilizadores de membrana\\OFTACROMAX.png",
     "favorite": false
   },
   {
@@ -1060,7 +944,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Es un antagonista que se une para bloquear a los receptores H1, evitando la vasodilatación y el aumento de la permeabilidad vascular provocados por la reacción alérgica.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Antihistaminicos (Antagonistas H1)/OFTALIRIO.webp",
+    "image": "\\images\\Antialergicos\\Antihistaminicos\\Oftalirio.jpeg",
     "favorite": false
   },
   {
@@ -1074,7 +958,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista selectivo de los receptores H1 que reduce la inflamación alérgica ocular.",
     "posologia": "Aplicar 1 gota cada 12 horas.",
-    "image": "images/Antialergicos/Antihistaminicos (Antagonistas H1)/OPTIALERG.webp",
+    "image": "\\images\\Antialergicos\\Antihistaminicos\\Optialerg.jpeg",
     "favorite": false
   },
   {
@@ -1088,7 +972,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea los efectos de la histamina en los receptores H1 de los vasos sanguíneos y nervios sensitivos.",
     "posologia": "Aplicar 1 gota cada 8 a 12 horas.",
-    "image": "images/Antialergicos/Antihistaminicos (Antagonistas H1)/VIDIZINE.webp",
+    "image": "\\images\\Antialergicos\\Antihistaminicos\\Vidizine.jpeg",
     "favorite": false
   },
   {
@@ -1102,7 +986,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloqueo de receptores H1 y estabilización de membrana de los mastocitos, evitando la liberación de mediadores inflamatorios.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/ALERXY-C.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Alerxy-c.jpeg",
     "favorite": false
   },
   {
@@ -1116,7 +1000,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista selectivo de receptores H1 y estabilizador de mastocitos.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/ATERGIT.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Atergit.jpeg",
     "favorite": false
   },
   {
@@ -1130,7 +1014,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Acción dual que previene y trata los síntomas de la conjuntivitis alérgica.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/RELESTAT.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Relestat.jpeg",
     "favorite": false
   },
   {
@@ -1144,7 +1028,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista de los receptores H1 de histamina y estabilizador de mastocitos, inhibiendo la liberación de mediadores químicos.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/KENALER.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Kenaler.jpeg",
     "favorite": false
   },
   {
@@ -1158,7 +1042,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Estabiliza la membrana de los mastocitos y bloquea los receptores H1 para aliviar síntomas de alergia ocular.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/KETOFTAL.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Ketoftal.jpeg",
     "favorite": false
   },
   {
@@ -1172,7 +1056,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Triple acción: antagonista H1, estabilizador de mastocitos e inhibidor de la activación de eosinófilos.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/ZADITEN.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Zaditen.jpeg",
     "favorite": false
   },
   {
@@ -1186,7 +1070,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Agente de doble acción que inhibe la degranulación de mastocitos y bloquea selectivamente los receptores H1.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/OLOPAT.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Olopat.jpeg",
     "favorite": false
   },
   {
@@ -1200,7 +1084,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antihistamínico selectivo y estabilizador de mastocitos para el tratamiento de la conjuntivitis alérgica.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/PATANOL.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Patanol.jpeg",
     "favorite": false
   },
   {
@@ -1214,7 +1098,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la liberación de histamina desde los mastocitos y bloquea su unión a los receptores vasculares oculares.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/OLOFTAL.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Oloftal.jpeg",
     "favorite": false
   },
   {
@@ -1228,7 +1112,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea los síntomas alérgicos mediante una doble vía: estabilización celular y antagonismo de receptores.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/OLODINA.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Olodina.jpeg",
     "favorite": false
   },
   {
@@ -1242,7 +1126,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antihistamínico de amplio espectro que reduce el prurito y la hiperemia ocular.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/OLOPATADINA.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Olopatadina.jpeg",
     "favorite": false
   },
   {
@@ -1256,7 +1140,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antihistamínico y estabilizador de mastocitos que inhibe la liberación de histamina y bloquea los receptores H1.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/ALAP.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Alap.jpeg",
     "favorite": false
   },
   {
@@ -1270,7 +1154,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista H1 selectivo que además suprime la migración de eosinófilos hacia los tejidos oculares inflamados.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/DOLCETTINA.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Dolcettina.jpeg",
     "favorite": false
   },
   {
@@ -1284,7 +1168,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista de receptores de histamina de amplio espectro para prevención rápida del prurito.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/LASTACAFT.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Lastacaft.jpeg",
     "favorite": false
   },
   {
@@ -1298,7 +1182,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea los receptores H1 y estabiliza los mastocitos para el control prolongado de la alergia.",
     "posologia": "Aplicar 1 gota cada 12 horas por 2 meses y suspender.",
-    "image": "images/Antialergicos/Acción Dual/ALECRIX.webp",
+    "image": "\\images\\Antialergicos\\Accion Dual\\Alecrix.jpeg",
     "favorite": false
   },
   {
@@ -1312,7 +1196,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la enzima ciclooxigenasa (COX), disminuyendo la síntesis de prostaglandinas relacionadas con el dolor y la inflamación.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día por 15 días.",
-    "image": "images/Antiinflamatorios/AINES/OFTIC.webp",
+    "image": "\\images\\Anti-Inflamatorios\\AINES\\Oftic.jpeg",
     "favorite": false
   },
   {
@@ -1326,7 +1210,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea la síntesis de prostaglandinas mediante la inhibición de la COX-1 y COX-2.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/3A OFTENO.webp",
+    "image": "images/Anti-Inflamatorios/AINES/3A-Ofteno.jpeg",
     "favorite": false
   },
   {
@@ -1340,7 +1224,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antiinflamatorio no esteroideo con acción analgésica ocular.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/WASSERVOLT.webp",
+    "image": "\\images\\Anti-Inflamatorios\\AINES\\Wasservolt.jpeg",
     "favorite": false
   },
   {
@@ -1354,7 +1238,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor de la síntesis de mediadores inflamatorios.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/DINACLORD.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Dinaclord.jpeg",
     "favorite": false
   },
   {
@@ -1368,7 +1252,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Reduce la inflamación postquirúrgica y el dolor mediante la inhibición de la COX.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/VOLTAREN OPHTHA.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Voltaren-Ophta.jpeg",
     "favorite": false
   },
   {
@@ -1382,7 +1266,7 @@ export class Products {
     "forma": "Solución Oftálmica (Sin conservantes)",
     "mecanismo": "Inhibidor de la COX en presentación libre de conservantes para ojos sensibles.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/DICLOABAK.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Dicloabak.jpeg",
     "favorite": false
   },
   {
@@ -1396,7 +1280,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Potente inhibidor de la síntesis de prostaglandinas, indicado para aliviar el prurito por conjuntivitis alérgica estacional.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/ACULAR.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Acular.jpeg",
     "favorite": false
   },
   {
@@ -1410,7 +1294,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Acción analgésica y antiinflamatoria ocular mediante la inhibición de la síntesis de prostaglandinas.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/POENKERAT.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Poenkerat.jpeg",
     "favorite": false
   },
   {
@@ -1424,7 +1308,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la síntesis de prostaglandinas al bloquear la enzima ciclooxigenasa (COX-1 y COX-2).",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/OPHTHAKER.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Ophthaker.jpeg",
     "favorite": false
   },
   {
@@ -1438,7 +1322,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Analgésico y antiinflamatorio no esteroideo para el alivio del dolor ocular.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/KENALGESIC.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Kenalgesic.jpeg",
     "favorite": false
   },
   {
@@ -1452,7 +1336,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea la síntesis de prostaglandinas, reduciendo la inflamación y el dolor post-cirugía de catarata.",
     "posologia": "1 gota cada 12 horas.",
-    "image": "images/Antiinflamatorios/AINES/ZEBESTEN.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Zebesten.jpeg",
     "favorite": false
   },
   {
@@ -1466,7 +1350,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor potente de la COX para el manejo de la inflamación ocular externa.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/BRONAX.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Bronax.jpeg",
     "favorite": false
   },
   {
@@ -1480,7 +1364,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antiinflamatorio tópico ocular que inhibe la síntesis de mediadores del dolor.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/NATAX.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Natax.jpeg",
     "favorite": false
   },
   {
@@ -1494,7 +1378,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la miosis intraoperatoria inducida por prostaglandinas y reduce la inflamación ocular.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/OCUFEN.webp",
+    "image": "\\images\\Anti-Inflamatorios\\AINES\\Ocufen.jpeg",
     "favorite": false
   },
   {
@@ -1508,7 +1392,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Profármaco que se hidroliza a amfenaco, inhibiendo la síntesis de prostaglandinas en la retina y coroides.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/NEPAOFTAL.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Nepaoftal.jpeg",
     "favorite": false
   },
   {
@@ -1522,7 +1406,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Inhibidor de la ciclooxigenasa con excelente penetración en el segmento posterior del ojo.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/NEVANAC.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Nevanac.jpeg",
     "favorite": false
   },
   {
@@ -1536,7 +1420,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Acción antiinflamatoria rápida mediante el bloqueo de la COX.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/NEOLAG ONE.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Neolag-One.jpeg",
     "favorite": false
   },
   {
@@ -1550,7 +1434,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibidor selectivo de la COX-2, reduciendo los efectos secundarios gastrointestinales (aunque su acción aquí es tópica).",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/OPTICAM.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Opticam.jpeg",
     "favorite": false
   },
   {
@@ -1564,7 +1448,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antiinflamatorio de la familia de los oxicams con acción inhibitoria sobre la COX.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/AINES/COXYLAN.webp",
+    "image": "images/Anti-Inflamatorios/AINES/Coxylan.jpeg",
     "favorite": false
   },
   {
@@ -1578,7 +1462,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Corticoide 'blando' que se sintetiza a partir de la prednisolona; inhibe el edema, el depósito de fibrina y la migración capilar.",
     "posologia": "1 gota cada 8 horas la 1ra semana, cada 12 la 2da, cada 24 la 3ra y suspender.",
-    "image": "images/Antiinflamatorios/Esteroides/DISALOT.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Disalot.jpeg",
     "favorite": false
   },
   {
@@ -1592,7 +1476,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Interactúa con receptores de glucocorticoides citoplasmáticos para inducir la síntesis de lipocortinas.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/TALOF.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Talof.jpeg",
     "favorite": false
   },
   {
@@ -1606,7 +1490,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Reduce la respuesta inflamatoria local con un menor riesgo de elevar la presión intraocular.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/LOTESOFT.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Lotesoft.jpeg",
     "favorite": false
   },
   {
@@ -1620,7 +1504,7 @@ export class Products {
     "forma": "Suspensión / Gel / Ungüento",
     "mecanismo": "Inhibe la respuesta inflamatoria a múltiples agentes provocadores que retrasan o enlentecen la curación.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/LOTEMAX.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Lotemax.jpeg",
     "favorite": false
   },
   {
@@ -1634,7 +1518,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Modula la expresión genética de proteínas que controlan la inflamación.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/OFTAPREDNOL MAX.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Oftaprednol Max.jpeg",
     "favorite": false
   },
   {
@@ -1648,7 +1532,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Combinación de un corticoide esteroideo y un antibiótico aminoglucósido.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/LOTEMICIN.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Lotemicin.jpeg",
     "favorite": false
   },
   {
@@ -1662,7 +1546,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Esteroide con menor tendencia a elevar la PIO que la dexametasona.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/FLUSURE.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Flusure.jpeg",
     "favorite": false
   },
   {
@@ -1676,7 +1560,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Inhibe la acumulación de células inflamatorias en sitios de infección.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/FLUMEX.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Flumex.jpeg",
     "favorite": false
   },
   {
@@ -1690,7 +1574,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Antiinflamatorio esteroideo de uso tópico ocular.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/FLUMETOL NF.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Flumetol-NF.jpeg",
     "favorite": false
   },
   {
@@ -1704,7 +1588,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Esteroide sintético con acción antiinflamatoria tópica.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/AFLAREX.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Aflarex.jpeg",
     "favorite": false
   },
   {
@@ -1718,7 +1602,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Control de procesos inflamatorios de la conjuntiva bulbar y palpebral.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/FLUOFTAL.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Fluoftal.jpeg",
     "favorite": false
   },
   {
@@ -1732,7 +1616,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Glucocorticoide potente que inhibe la respuesta inflamatoria de carácter mecánico, químico o inmunológico.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/OPHTHASONA.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Ophthasona.jpeg",
     "favorite": false
   },
   {
@@ -1746,7 +1630,7 @@ export class Products {
     "forma": "Suspensión / Ungüento",
     "mecanismo": "Esteroide de alta potencia para el tratamiento de afecciones inflamatorias severas.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/MAXIDEX.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Maxidex.jpeg",
     "favorite": false
   },
   {
@@ -1760,7 +1644,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Esteroide de referencia para inflamaciones intraoculares; alta penetración corneal.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/PRED-F.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Pred-f.jpeg",
     "favorite": false
   },
   {
@@ -1774,7 +1658,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Control de la inflamación mediante la supresión de la migración de leucocitos polimorfonucleares.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/PREFOX-T.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Prefox-T.jpeg",
     "favorite": false
   },
   {
@@ -1788,7 +1672,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Inhibe el edema y la respuesta inflamatoria tisular.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/CORTIOFTAL.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Cortioftal.jpeg",
     "favorite": false
   },
   {
@@ -1802,7 +1686,7 @@ export class Products {
     "forma": "Suspensión Oftálmica",
     "mecanismo": "Efectivo en el tratamiento de uveítis anterior y queratitis.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/PROXTEN PLUS.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Proxten-Plus.jpeg",
     "favorite": false
   },
   {
@@ -1816,7 +1700,7 @@ export class Products {
     "forma": "Emulsión Oftálmica",
     "mecanismo": "Esteroide de cuarta generación; derivado fluorado de alta potencia para inflamación postoperatoria severa.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/DUREZOL.webp",
+    "image": "images/Anti-Inflamatorios/Corticoesteroides/Durezol.jpeg",
     "favorite": false
   },
   {
@@ -1830,7 +1714,7 @@ export class Products {
     "forma": "Emulsión Oftálmica",
     "mecanismo": "Glucocorticoide sintético con mayor afinidad por el receptor que la prednisolona.",
     "posologia": "Según indicación médica.",
-    "image": "images/Antiinflamatorios/Esteroides/TOLF.webp",
+    "image": "\\images\\Anti-Inflamatorios\\Corticoesteroides\\Tolf-1.jpeg",
     "favorite": false
   },
   {
@@ -1844,7 +1728,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Inhibe la calcineurina, bloqueando la activación y proliferación de linfocitos T, lo que reduce la inflamación de la superficie ocular.",
     "posologia": "1 gota en cada ojo cada 12 horas (tiempo según criterio médico).",
-    "image": "images/Antiinflamatorios/Inmunomoduladores/MODUSIK A.webp",
+    "image": "images/Anti-Inflamatorios/Inmunomoduladores/Modusik-A.jpeg",
     "favorite": false
   },
   {
@@ -1858,7 +1742,7 @@ export class Products {
     "forma": "Emulsión Oftálmica (Viales monodosis)",
     "mecanismo": "Inmunomodulador tópico que ayuda a aumentar la capacidad natural del ojo para producir lágrimas, reduciendo la inflamación mediada por células T.",
     "posologia": "Aplicar 1 gota en cada ojo cada 12 horas.",
-    "image": "images/Antiinflamatorios/Inmunomoduladores/RESTASIS.webp",
+    "image": "images/Anti-Inflamatorios/Inmunomoduladores/Restasis.jpeg",
     "favorite": false
   },
   {
@@ -1872,7 +1756,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea canales de sodio en las terminaciones nerviosas de la córnea y conjuntiva, impidiendo la transmisión del impulso doloroso.",
     "posologia": "1–2 gotas antes del procedimiento; repetir si es necesario bajo supervisión médica.",
-    "image": "images/Anestesicos/PONTIOFTENO.webp",
+    "image": "images/Anestesicos/Anestesicos/Anestesicos locales/Ponti-ofteno.jpeg",
     "favorite": false
   },
   {
@@ -1886,7 +1770,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Estabiliza la membrana neuronal de las terminaciones nerviosas bloqueando canales de sodio y deteniendo la transmisión del dolor.",
     "posologia": "1–2 gotas antes del procedimiento; repetir si es necesario.",
-    "image": "images/Anestesicos/ALCAINE.webp",
+    "image": "images/Anestesicos/Anestesicos/Anestesicos locales/Alcaine.jpeg",
     "favorite": false
   },
   {
@@ -1900,7 +1784,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea de manera reversible los canales de sodio dependientes de voltaje en las fibras nerviosas sensitivas de la córnea.",
     "posologia": "1–2 gotas antes del procedimiento oftálmico.",
-    "image": "images/Anestesicos/OQ-SEINA.webp",
+    "image": "images/Anestesicos/Anestesicos/Anestesicos locales/OQ-seina.jpeg",
     "favorite": false
   },
   {
@@ -1914,7 +1798,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Anticolinérgico que bloquea por partes iguales los receptores muscarínicos M2 (iris) y M3 (músculo ciliar), impidiendo la acción de la acetilcolina.",
     "posologia": "Aplicar 1 gota 30-40 min antes del examen; se puede aplicar una segunda dosis 5 min después.",
-    "image": "images/Autonomicos/CYCLOGIL.webp",
+    "image": "images/autonomicos/ciclopegicos/Cyclogyl.jpeg",
     "favorite": false
   },
   {
@@ -1928,7 +1812,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Bloquea la respuesta del músculo esfínter del iris y del músculo acomodativo del cuerpo ciliar a la estimulación colinérgica.",
     "posologia": "Según indicación médica para cicloplejia.",
-    "image": "images/Autonomicos/CICLOPENTOLATO_POEN.webp",
+    "image": "images/autonomicos/ciclopegicos/Ciclopentolato.jpeg",
     "favorite": false
   },
   {
@@ -1942,7 +1826,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Produce midriasis y cicloplejia de inicio rápido y duración moderada.",
     "posologia": "Según indicación clínica.",
-    "image": "images/Autonomicos/CICLOFTAL.webp",
+    "image": "images/autonomicos/ciclopegicos/cicloftal.jpeg",
     "favorite": false
   },
   {
@@ -1956,7 +1840,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista competitivo reversible con mayor intensidad sobre los receptores M3 del músculo ciliar; es el ciclopléjico más potente.",
     "posologia": "Aplicar una gota en cada ojo cada 8 h por 8 días y suspender.",
-    "image": "images/Autonomicos/ISOPTO_ATROPINA.webp",
+    "image": "images/autonomicos/ciclopegicos/Isopto-Atropina.jpeg",
     "favorite": false
   },
   {
@@ -1970,7 +1854,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Antagonista muscarínico que bloquea los receptores del iris y del músculo ciliar, predominando su efecto midriático.",
     "posologia": "Según indicación médica para fondo de ojo.",
-    "image": "images/Autonomicos/MYDRIACYL.webp",
+    "image": "images/autonomicos/ciclopegicos/Mydriacyl.jpeg",
     "favorite": false
   },
   {
@@ -1984,7 +1868,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Combinación de un anticolinérgico y un agonista alfa-1 adrenérgico para lograr una midriasis máxima y rápida.",
     "posologia": "1 gota 15-20 min antes del examen de fondo de ojo.",
-    "image": "images/Autonomicos/FOTORRETIN.webp",
+    "image": "images/autonomicos/ciclopegicos/Fotorretin.jpeg",
     "favorite": false
   },
   {
@@ -1998,7 +1882,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Produce midriasis por la acción sinérgica de sus componentes sobre el músculo esfínter y el dilatador del iris.",
     "posologia": "Según criterio médico para dilatación pupilar.",
-    "image": "images/Autonomicos/TP_OFTENO.webp",
+    "image": "images/autonomicos/ciclopegicos/T-P-Ofteno.jpeg",
     "favorite": false
   },
   {
@@ -2012,7 +1896,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Agonista alfa-1 adrenérgico que produce vasoconstricción conjuntival, asociado a un corticoide para reducir la inflamación.",
     "posologia": "Aplicar 1 gota en cada ojo cada 6 horas.",
-    "image": "images/Autonomicos/CORTIOFTAL_F.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Cortioftal-F.jpeg",
     "favorite": false
   },
   {
@@ -2026,7 +1910,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Estimula directamente los receptores alfa-adrenérgicos del sistema nervioso simpático para producir vasoconstricción.",
     "posologia": "1 gota cada 8 a 12 horas. Máximo 3 días de uso.",
-    "image": "images/Autonomicos/NAFOFTALM.webp",
+    "image": "images/autonomicos/Vasoconstrictores/NafOftalm.jpeg",
     "favorite": false
   },
   {
@@ -2040,7 +1924,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Vasoconstrictor que reduce la congestión conjuntival al estrechar las arteriolas oculares.",
     "posologia": "1 gota cada 8 a 12 horas. Máximo 3 días de uso.",
-    "image": "images/Autonomicos/NAZIL.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Nazil.jpeg",
     "favorite": false
   },
   {
@@ -2054,7 +1938,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Acción simpaticomimética directa sobre los receptores alfa para eliminar el enrojecimiento ocular.",
     "posologia": "1 gota cada 8 a 12 horas. Máximo 3 días de uso.",
-    "image": "images/Autonomicos/OFTALMOTRISOL.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Oftalmotrisol.jpeg",
     "favorite": false
   },
   {
@@ -2068,7 +1952,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Provoca una rápida constricción de los vasos sanguíneos conjuntivales, aliviando la hiperemia.",
     "posologia": "1 gota cada 8 a 12 horas. Máximo 3 días de uso.",
-    "image": "images/Autonomicos/EYE-ZUL.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Eye-Zul.jpeg",
     "favorite": false
   },
   {
@@ -2082,7 +1966,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Agonista alfa-adrenérgico que disminuye el flujo sanguíneo local y el edema ocular.",
     "posologia": "1 gota cada 8 a 12 horas. Máximo 3 días de uso.",
-    "image": "images/Autonomicos/LUZ-ZUL.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Luz-Zul.jpeg",
     "favorite": false
   },
   {
@@ -2096,7 +1980,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Compuesto simpaticomimético utilizado para la descongestión ocular temporal.",
     "posologia": "1 gota cada 8 a 12 horas. Máximo 3 días de uso.",
-    "image": "images/Autonomicos/NAFAZOLINA_CLORHIDRATO.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Nafazolina-Clorhidrato.jpeg",
     "favorite": false
   },
   {
@@ -2110,7 +1994,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Reduce la irritación y el enrojecimiento ocular mediante vasoconstricción periférica.",
     "posologia": "1 gota cada 8 a 12 horas.",
-    "image": "images/Autonomicos/CLARIVIS.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Clarivis.jpeg",
     "favorite": false
   },
   {
@@ -2124,7 +2008,7 @@ export class Products {
     "forma": "Solución Oftálmica",
     "mecanismo": "Aminosimpaticomimética que actúa sobre receptores alfa, causando constricción de arteriolas conjuntivales pequeñas.",
     "posologia": "1 a 2 gotas hasta 4 veces al día.",
-    "image": "images/Autonomicos/VISINE.webp",
+    "image": "images/autonomicos/Vasoconstrictores/Visine.jpeg",
     "favorite": false
   },
   {
@@ -2152,7 +2036,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Forma una capa lubricante y protectora que reduce la fricción durante el parpadeo y mejora el confort ocular.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Derivados de celulosa/Opthacril.jpeg",
+    "image": "images/Lubricantes/Derivados de celulosa/Ophthacril.jpeg",
     "favorite": false
   },
   {
@@ -2166,7 +2050,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Estabiliza la película lagrimal aumentando el tiempo de ruptura lagrimal y aliviando el ardor.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Derivados de celulosa/Tears naturale.jpeg",
+    "image": "images/Lubricantes/Derivados de celulosa/Tears-Naturale.jpeg",
     "favorite": false
   },
   {
@@ -2250,7 +2134,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Humectante ocular para el alivio de la fatiga y el ardor por ojo seco.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Derivados de celulosa/Vital vision.jpeg",
+    "image": "images/Lubricantes/Derivados de celulosa/Vital-Vision.jpeg",
     "favorite": false
   },
   {
@@ -2292,7 +2176,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Aumenta la viscosidad de la película lagrimal y forma una capa lubricante sobre córnea y conjuntiva. Reduce la fricción palpebral y mejora la estabilidad lagrimal.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día hasta terminar frasco.",
-    "image": "images/Lubricantes/Polimeros polivinilicos/Oftalub.jpeg",
+    "image": "images/Lubricantes/Polimeros polivinilicos/Oflalub.jpeg",
     "favorite": false
   },
   {
@@ -2306,7 +2190,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Agente humectante que sustituye la capa acuosa de la lágrima y estabiliza la película lagrimal.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Polimeros polivinilicos/Alcohol polivinilico.jpeg",
+    "image": "images/Lubricantes/Polimeros polivinilicos/Alcohol-Polivinilico.jpeg",
     "favorite": false
   },
   {
@@ -2348,7 +2232,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Se adhiere a la superficie ocular y retiene agua, estabilizando la película lagrimal y disminuyendo la evaporación.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día hasta terminar frasco.",
-    "image": "images/Lubricantes/Polimeros polivinilicos/TotalConfort.jpeg",
+    "image": "images/Lubricantes/Polimeros polivinilicos/Total-Confort.jpeg",
     "favorite": false
   },
   {
@@ -2418,7 +2302,7 @@ export class Products {
     "forma": "Ungüento Oftálmico",
     "mecanismo": "Gel lubricante de alta viscosidad que proporciona alivio duradero al proteger la superficie ocular.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Polimeros polivinilicos/Refresh gel.jpeg",
+    "image": "images/Lubricantes/Polimeros polivinilicos/Refresh-Gel.jpeg",
     "favorite": false
   },
   {
@@ -2474,7 +2358,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Forma una capa lubricante que reduce la fricción palpebral y estabiliza la película lagrimal.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día hasta terminar frasco.",
-    "image": "images/Lubricantes/Derivados polisacaridos/Tears Naturale.jpeg",
+    "image": "images/Lubricantes/Derivados polisacaridos/Tears-Naturale.jpeg",
     "favorite": false
   },
   {
@@ -2544,7 +2428,7 @@ export class Products {
     "forma": "Solución oftálmica (Sistema COMOD)",
     "mecanismo": "Forma una película lubricante de larga duración, estable y uniforme sobre la superficie del ojo.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Derivados polisacaridos/Hylo Comod.jpeg",
+    "image": "images/Lubricantes/Derivados polisacaridos/Hylo-Comod.jpeg",
     "favorite": false
   },
   {
@@ -2558,7 +2442,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Hidratación avanzada que restaura y protege la superficie ocular de los síntomas de sequedad.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día.",
-    "image": "images/Lubricantes/Derivados polisacaridos/Systane Ha.jpeg",
+    "image": "images/Lubricantes/Derivados polisacaridos/Systane-HA.jpeg",
     "favorite": false
   },
   {
@@ -2572,7 +2456,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Glicosaminoglicano sulfatado que retiene agua y forma una capa protectora sobre el epitelio corneal.",
     "posologia": "Aplicar 1 gota en cada ojo 3 veces al día hasta terminar frasco.",
-    "image": "images/Lubricantes/Derivados polisacaridos/Splash tears.jpeg",
+    "image": "images/Lubricantes/Derivados polisacaridos/Splash-Tears.jpeg",
     "favorite": false
   },
   {
@@ -2586,7 +2470,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Actúa como inmunomodulador tópico inhibiendo la activación de linfocitos T, lo que reduce la inflamación crónica de las glándulas lagrimales y restaura la producción de lágrimas.",
     "posologia": "Aplicar 1 gota en cada ojo cada 8 a 12 horas según tolerancia al ardor.",
-    "image": "images/Lubricantes/Inmunomoduladores/Modusik A.jpeg",
+    "image": "\\images\\Lubricantes\\Inmunomodulador\\Modusik-A.jpeg",
     "favorite": false
   },
   {
@@ -2600,7 +2484,7 @@ export class Products {
     "forma": "Solución oftálmica",
     "mecanismo": "Inhibe la calcineurina para prevenir la activación de células inflamatorias en la superficie ocular, mejorando la estabilidad de la película lagrimal.",
     "posologia": "Aplicar 1 gota en cada ojo cada 8 a 12 horas.",
-    "image": "images/Lubricantes/Inmunomoduladores/Closporil.jpeg",
+    "image": "\\images\\Lubricantes\\Inmunomodulador\\Closporil.jpeg",
     "favorite": false
   },
   {
@@ -2614,12 +2498,12 @@ export class Products {
     "forma": "Emulsión oftálmica",
     "mecanismo": "Inmunomodulador que ayuda a aumentar la capacidad natural del ojo para producir lágrimas en pacientes con ojo seco inflamatorio.",
     "posologia": "Aplicar 1 gota en cada ojo cada 12 horas.",
-    "image": "images/Lubricantes/Inmunomoduladores/Restasis.jpeg",
+    "image": "\\images\\Lubricantes\\Inmunomodulador\\Restasis.jpeg",
     "favorite": false
   },
   {
     "id": 177,
-    "name": "Preparado magistral",
+    "name": "Tacrolimus TQ",
     "generic_name": "Tacrolimus FK 506",
     "category": "Lubricantes",
     "family": "Inmunomoduladores",
@@ -2628,7 +2512,7 @@ export class Products {
     "forma": "Solución oftálmica / Ungüento",
     "mecanismo": "Inhibe la activación de linfocitos T de manera más potente que la ciclosporina, reduciendo la inflamación severa en glándulas lagrimales y conjuntiva.",
     "posologia": "Aplicar 1 gota en cada ojo cada 8 a 12 horas.",
-    "image": "images/Lubricantes/Inmunomoduladores/Preparado magistral.jpeg",
+    "image": "\\images\\Lubricantes\\Inmunomodulador\\Tacrolimus.jpeg",
     "favorite": false
   },
   {
@@ -2642,7 +2526,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Bloquea receptores β1/β2 en el cuerpo ciliar, disminuyendo la producción de humor acuoso.",
     "posologia": "1 gota cada 12 horas.",
-    "image": "images/Antiglaucomatosos/Betabloqueantes/Timolol TQ.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Betabloqueantes\\Timolol-TQ.jpeg",
     "favorite": false
   },
   {
@@ -2656,7 +2540,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Reducción de la presión intraocular al inhibir la producción de humor acuoso.",
     "posologia": "1 gota cada 12 horas.",
-    "image": "images/Antiglaucomatosos/Betabloqueantes/Timoptic.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Betabloqueantes\\Timoptic.jpeg",
     "favorite": false
   },
   {
@@ -2670,7 +2554,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Se une a receptores FP aumentando el drenaje uveoscleral del humor acuoso.",
     "posologia": "1 gota al día (preferiblemente en la noche).",
-    "image": "images/Antiglaucomatosos/Analogos de prostaglandinas/Xalatan.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Análogos de prostaglandinas\\Xalatan.jpeg",
     "favorite": false
   },
   {
@@ -2684,7 +2568,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Análogo de prostaglandina F2α que aumenta el drenaje del humor acuoso por la vía uveoscleral.",
     "posologia": "1 gota al día.",
-    "image": "images/Antiglaucomatosos/Analogos de prostaglandinas/Glaucoprost.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Análogos de prostaglandinas\\Glaucoprost.jpeg",
     "favorite": false
   },
   {
@@ -2698,7 +2582,7 @@ export class Products {
     "forma": "Gotas oftálmicas (Sistema de conservación iónico)",
     "mecanismo": "Inhibidor de la presión intraocular mediante el aumento de la eliminación de humor acuoso.",
     "posologia": "1 gota al día.",
-    "image": "images/Antiglaucomatosos/Analogos de prostaglandinas/Travatan Z.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Análogos de prostaglandinas\\Travatan-Z.webp",
     "favorite": false
   },
   {
@@ -2712,7 +2596,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Prostamida sintética que aumenta el flujo de salida del humor acuoso por las vías trabecular y uveoscleral.",
     "posologia": "1 gota al día.",
-    "image": "images/Antiglaucomatosos/Analogos de prostaglandinas/Lumigan.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Análogos de prostaglandinas\\Lumigan.jpeg",
     "favorite": false
   },
   {
@@ -2726,7 +2610,7 @@ export class Products {
     "forma": "Gotas oftálmicas sin conservantes",
     "mecanismo": "Análogo de prostaglandina altamente selectivo para el receptor FP.",
     "posologia": "1 gota al día.",
-    "image": "images/Antiglaucomatosos/Analogos de prostaglandinas/Zioptan.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Análogos de prostaglandinas\\Zioptan.jpeg",
     "favorite": false
   },
   {
@@ -2740,7 +2624,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Inhibe la anhidrasa carbónica tipo II en el cuerpo ciliar, reduciendo la secreción de bicarbonato y humor acuoso.",
     "posologia": "1 gota 2 veces al día.",
-    "image": "images/Antiglaucomatosos/Inhibidores de la anhidrasa carbonica/Trusopt.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Inhibidores de la anhidrasa carbónica\\Trusopt.jpeg",
     "favorite": false
   },
   {
@@ -2754,7 +2638,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Potente inhibidor de la anhidrasa carbónica que disminuye la presión intraocular.",
     "posologia": "1 gota 2 veces al día.",
-    "image": "images/Antiglaucomatosos/Inhibidores de la anhidrasa carbonica/Dorzolamida generica.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Inhibidores de la anhidrasa carbónica\\dorzolamida.jpg",
     "favorite": false
   },
   {
@@ -2768,7 +2652,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Inhibidor de la anhidrasa carbónica altamente específico que reduce la producción de humor acuoso.",
     "posologia": "1 gota 2 veces al día.",
-    "image": "images/Antiglaucomatosos/Inhibidores de la anhidrasa carbonica/Azopt.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Inhibidores de la anhidrasa carbónica\\Azopt.jpeg",
     "favorite": false
   },
   {
@@ -2782,7 +2666,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Estimula los receptores α2 reduciendo la producción de humor acuoso y aumentando el flujo uveoscleral.",
     "posologia": "1 gota 2 veces al día.",
-    "image": "images/Antiglaucomatosos/Agonistas α‑adrenergicos/Alphagan.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Agonistas α‑adrenérgicos\\Alphagan.jpeg",
     "favorite": false
   },
   {
@@ -2796,7 +2680,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Sinergia hipotensora al combinar un agonista α2 (↓ producción / ↑ drenaje) con un betabloqueante (↓ producción).",
     "posologia": "1 gota 2 veces al día.",
-    "image": "images/Antiglaucomatosos/Combinados/Combigan.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Combinados\\Combigan.jpeg",
     "favorite": false
   },
   {
@@ -2824,7 +2708,7 @@ export class Products {
     "forma": "Gotas oftálmicas",
     "mecanismo": "Análogo de prostaglandina para el control de la PIO.",
     "posologia": "1 gota al día.",
-    "image": "images/Antiglaucomatosos/Analogos de prostaglandinas/PRO-122.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Análogos de prostaglandinas\\Latanoprost.webp",
     "favorite": false
   },
   {
@@ -2838,12 +2722,14 @@ export class Products {
     "forma": "Suspensión oftálmica",
     "mecanismo": "Combinación libre de betabloqueantes que utiliza dos mecanismos independientes para reducir la presión intraocular elevada.",
     "posologia": "1 gota 3 veces al día.",
-    "image": "images/Antiglaucomatosos/Combinados/Simbranza.jpeg",
+    "image": "\\images\\Antiglaucomatosos\\Combinados\\Simbrinza.jpeg",
     "favorite": false
-  }
+  },
+  
+    
 
 ];
-  // ... Los 152 productos están procesados y listos.
+  // ...  productos están procesados y listos.
 
   getSubcategories(): string[] {
     if (this.selectedCategory === 'Todos' || this.selectedCategory === 'Favoritos') return [];
