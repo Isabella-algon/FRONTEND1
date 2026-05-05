@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../service/data.service';
+import { Router } from '@angular/router';
 
 
 
@@ -15,7 +16,7 @@ import { DataService } from '../../service/data.service';
 })
 
 export class Products {
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private router: Router) {}
 
   selectedCategory: string = 'Todos';
   selectedSubcategory: string = 'Todas';
@@ -23,7 +24,7 @@ export class Products {
   selectedProduct: any = null;
 
   categories = [
-    'Todos', 'Antibioticos', 'Antialergicos', 'Anti-inflamatorios', 
+    'Todos', 'Antibioticos', 'Antialergicos', 'Antiinflamatorios', 
     'Anestesicos', 'Autonomicos', 'Lubricantes', 'Antiglaucomatosos', 'Favoritos'
   ];
 
@@ -2759,7 +2760,14 @@ selectSubcategory(sub: string) {
     });
   }
 
-  verDetalle(product: any) { this.selectedProduct = product; }
+verDetalle(product: any) {
+  // Primero le pasamos toda tu lista de 191 productos al servicio
+  this.dataService.setProducts(this.products); 
+  
+  // Luego viajamos a la nueva página
+  this.router.navigate(['/producto', product.id]); 
+}
+  
   cerrarDetalle() { this.selectedProduct = null; }
   toggleFavorite(p: any) { p.favorite = !p.favorite; }
 }

@@ -46,7 +46,9 @@
         {{ p.favorite ? '★' : '☆' }}
       </button>
       
-      <img [src]="p.image" [alt]="p.name" class="product-img">
+      <div class="img-container" (click)="verDetalle(p)">
+  <img [src]="p.image" class="product-img">
+</div>
       
       <div class="card-body">
         <h3 class="product-name">{{ p.name }}</h3>

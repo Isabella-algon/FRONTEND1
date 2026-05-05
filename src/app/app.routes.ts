@@ -17,23 +17,24 @@ export const routes: Routes = [
     loadComponent: () => import('./features/home/home').then(m => m.Home)
   },
   {
-    path: 'products',
+    path: 'products', // Esta es tu lista de productos
     canActivate: [authGuard],
     loadComponent: () => import('./features/products/products').then(m => m.Products)
   },
-
+  {
+    // ESTA ES LA NUEVA RUTA PARA EL DETALLE
+    path: 'producto/:id', 
+    canActivate: [authGuard],
+    loadComponent: () => import('./features/products/product-detail').then(m => m.ProductDetail)
+  },
   {
     path: 'dashboard',
     canActivate: [authGuard],
     loadComponent: () => import('./features/dashboard/dashboard').then(m => m.Dashboard)
   },
-
-
-
   {
     path: 'users',
     canActivate: [authGuard],
     loadComponent: () => import('./features/users/users').then(m => m.Users)
   }
-
 ];
