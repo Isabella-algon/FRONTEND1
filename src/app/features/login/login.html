@@ -1,0 +1,56 @@
+<div class="login-background">
+  <div class="login-card">
+    
+    <div class="div-logo">
+      <img src="/images/logovademecum.png" alt="Logo" class="logo-login" />
+    </div>
+
+    <h2 class="title">{{ esRegistro() ? 'Crear Cuenta' : 'Iniciar Sesión' }}</h2>
+    <p class="subtitle">{{ esRegistro() ? 'Únete al Vademécum' : 'Ingresa con tus datos' }}</p>
+
+    <form [formGroup]="form" >
+      
+      <!-- LOGIN: SOLO EMAIL -->
+      <div class="form-group">
+        <label>Correo Electrónico</label>
+        <input type="email" formControlName="email" placeholder="ejemplo@uces.edu.co" />
+      </div>
+
+      <!-- REGISTRO -->
+      <div *ngIf="esRegistro()">
+
+        <div class="form-group">
+          <label>Nombre Completo</label>
+          <input type="text" formControlName="full_name" placeholder="Tu nombre completo" />
+        </div>
+
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="text" formControlName="telephone" placeholder="Ej: 3001234567" />
+        </div>
+
+        <div class="form-group">
+          <label>Documento de Identidad</label>
+          <input type="text" formControlName="identification" placeholder="C.C. o Tarjeta Prof." />
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" formControlName="password" placeholder="••••••••" />
+      </div>
+
+      <button type="button" class="btn-login" (click)="esRegistro() ? registrar() : login()">
+        {{ esRegistro() ? 'Finalizar Registro' : 'Inicia sesión' }}
+      </button>
+
+      <p class="footer-text">
+        {{ esRegistro() ? '¿Ya tienes una cuenta?' : '¿Aún no tienes una cuenta?' }} 
+        <a href="javascript:void(0)" (click)="toggleModo()">
+          {{ esRegistro() ? 'Inicia sesión aquí' : 'Regístrate aquí' }}
+        </a>
+      </p>
+    </form>
+  </div>
+</div>

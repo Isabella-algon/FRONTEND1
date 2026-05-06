@@ -1,0 +1,95 @@
+/* VARIABLES: Tus colores originales */
+$verde-salud: #2D8A6B;
+$azul-profundo: #1A3A5F;
+$dorado-detalle: #C5A059;
+$blanco-puro: #ffffff;
+
+.login-background {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  font-family: 'Segoe UI', sans-serif;
+  
+  /* FONDO: Tu imagen con filtro corregido */
+  background-image: url('/images/optometria.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Filtro oscuro para resaltar la tarjeta */
+  background-color: rgba(0, 0, 0, 0.4); 
+  background-blend-mode: darken;
+}
+
+.login-card {
+  background-color: rgba(249, 249, 247, 0.96);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 2px solid $dorado-detalle;
+  text-align: center;
+  
+  /* CAMBIO: Transición suave para cuando aparecen los campos de registro */
+  transition: all 0.4s ease-in-out;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+/* Estilos de inputs y botones (Tus mismos estilos) */
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+  label {
+    font-size: 13px;
+    color: $azul-profundo;
+    font-weight: 600;
+  }
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    &:focus {
+      border-color: $verde-salud;
+      outline: none;
+    }
+  }
+}
+
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background-color: $verde-salud;
+  color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: $azul-profundo;
+  }
+}
+
+.footer-text a {
+  color: $verde-salud;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Estilos para el logo */
+.div-logo {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.logo-login {
+  max-width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
